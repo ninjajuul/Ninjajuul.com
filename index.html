@@ -1,99 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ninjajuul</title>
 <style>
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    font-family:Arial,Helvetica,sans-serif;
-    font-size:14px;
-    color:#000;
-    background:#fff;
-    display:flex;
-    min-height:100vh;
-    padding-top:env(safe-area-inset-top,0px);
-    padding-bottom:env(safe-area-inset-bottom,0px);
-  }
-  a{color:#3366bb;text-decoration:underline;}
-  a:visited{color:#663399;}
+.ninjajuul-wrap{
+  --nj-border:#99bcd8;
+  font-family:Arial,Helvetica,sans-serif !important;
+  font-size:14px !important;
+  color:#000 !important;
+  background:#fff;
+  display:flex;
+  flex-wrap:wrap;
+  min-height:100vh;
+  box-sizing:border-box;
+}
+.ninjajuul-wrap *{box-sizing:border-box;}
+.ninjajuul-wrap a{color:#3366bb !important;text-decoration:underline !important;}
+.ninjajuul-wrap a:visited{color:#663399 !important;}
 
-  #sidebar{
-    width:210px;
-    flex:0 0 210px;
-    background:#c9e0f2;
-    padding:14px 10px;
-    border-right:1px solid #99bcd8;
-  }
-  #sidebar h2{
-    font-size:15px;
-    margin:16px 0 4px;
-    color:#000;
-  }
-  #sidebar h2:first-child{margin-top:0;}
-  #sidebar ul{
-    list-style:none;
-    margin:0 0 0 2px;
-    padding:0;
-  }
-  #sidebar li{margin:2px 0;}
+.ninjajuul-wrap #sidebar{
+  width:210px;
+  flex:0 0 210px;
+  background:#c9e0f2;
+  padding:14px 10px;
+  border-right:1px solid var(--nj-border);
+}
+.ninjajuul-wrap #sidebar h2{
+  font-size:15px !important;
+  margin:16px 0 4px !important;
+  color:#000 !important;
+  padding:0 !important;
+  border:0 !important;
+  background:none !important;
+}
+.ninjajuul-wrap #sidebar h2:first-child{margin-top:0 !important;}
+.ninjajuul-wrap #sidebar ul{
+  list-style:none !important;
+  margin:0 0 0 2px !important;
+  padding:0 !important;
+}
+.ninjajuul-wrap #sidebar li{margin:2px 0 !important;}
 
-  #main{
-    flex:1;
-    padding:20px 30px;
-  }
+.ninjajuul-wrap #main{
+  flex:1 1 300px;
+  padding:20px 30px;
+  min-width:0;
+}
+.ninjajuul-wrap #main p{
+  max-width:900px;
+  line-height:1.6em !important;
+  margin:0 0 14px !important;
+}
+.ninjajuul-wrap .project-title{font-weight:bold;}
 
-  #tagline{
-    text-align:center;
-    font-weight:bold;
-    color:#144a7a;
-    font-size:15px;
-    margin-bottom:20px;
-  }
-  #main p{
-    max-width:900px;
-    line-height:1.6em;
-    margin:0 0 14px;
-  }
-  .project-title{font-weight:bold;}
-
-  @media (max-width:640px){
-    body{flex-direction:column;}
-    #sidebar{width:100%;flex:none;border-right:none;border-bottom:1px solid #99bcd8;}
-  }
+@media (max-width:640px){
+  .ninjajuul-wrap{flex-direction:column;}
+  .ninjajuul-wrap #sidebar{width:100%;flex:none;border-right:none;border-bottom:1px solid var(--nj-border);}
+}
 </style>
-</head>
-<body>
 
-<div id="sidebar">
-  <h2>Ninjajuul</h2>
-  <ul>
-    <li><a href="#home">Home</a></li>
-  </ul>
+<div class="ninjajuul-wrap">
 
-  <h2>Links</h2>
-  <ul>
-    <li><a href="https://github.com/Ninjajuul">GitHub</a></li>
-  </ul>
+  <div id="sidebar">
+    <h2>Ninjajuul</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+    </ul>
+
+    <h2>Links</h2>
+    <ul>
+      <li><a href="https://github.com/Ninjajuul" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+  </div>
+
+  <div id="main">
+
+    <p>Some of my projects:</p>
+
+    <p id="project-one"><span class="project-title">YouTube Caption Copier</span> ‐ Simple Python program with the youtube-transcript-api
+    <a href="https://github.com/ninjajuul/Youtube-Caption-Copier" target="_blank" rel="noopener noreferrer">View project</a>.</p>
+
+    <p id="project-two"><span class="project-title">Simple-Weather-App</span> ‐ A simple weather app in Python wich uses the open-meteo api <a href="https://github.com/ninjajuul/simple-weather-app" target="_blank" rel="noopener noreferrer">View project</a>.</p>
+
+    <p id="project-three"><span class="project-title">qrcode-generator</span> ‐ Simple url to qr code using qr code and pillow <a href="https://github.com/ninjajuul/qrcode-generator" target="_blank" rel="noopener noreferrer">View project</a>.</p>
+
+    <p>You can find all of my projects on <a href="https://github.com/Ninjajuul" target="_blank" rel="noopener noreferrer">GitHub</a>!</p>
+
+    <p>This website is open source too, check it out on <a href="https://github.com/ninjajuul/Ninjajuul.com" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+
+  </div>
+
 </div>
-
-<div id="main">
-
-  <p>Some of my projects:</p>
-
-  <p id="project-one"><span class="project-title">YouTube Caption Copier</span> &dash; Simple Python program with the youtube-transcript-api
-  <a href="https://github.com/ninjajuul/Youtube-Caption-Copier">View project</a>.</p>
-
-  <p id="project-two"><span class="project-title">Simple-Weather-App</span> &dash; A simple weather app in Python wich uses the open-meteo api <a href="https://github.com/ninjajuul/simple-weather-app">View project</a>.</p>
-
-  <p id="project-three"><span class="project-title">qrcode-generator</span> &dash; Simple url to qr code using qr code and pillow<a href="https://github.com/ninjajuul/qrcode-generator">View project</a>.</p>
-
-  <p>You can find all of my projects on <a href="https://github.com/Ninjajuul">GitHub</a>!
-
-  <p>This website is open source too, check it out on <a href="https://github.com/ninjajuul/Ninjajuul.com">GitHub</a>
-</div>
-
-</body>
-</html>
